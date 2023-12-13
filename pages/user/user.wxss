@@ -1,0 +1,42 @@
+.user_tops{
+  background-color: rgb(87, 134, 92);
+  display: flex;
+  width: 100%;
+  height: 400rpx;
+  border-radius: 0 0 35px 35px;
+  flex-wrap: wrap;
+}
+.user_detail{
+  background-color: #fff;
+  width: 100%;
+  height: 300rpx;
+  margin-top: 90rpx;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #c7c6c6;
+}
+.head{
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+}
+.user_name{
+  margin-left: 120px;
+  margin-top: -38px;
+  font-size: 20;
+  font-weight: solid;
+}
+.user_cell{
+  border-color: transparent;
+  margin-top: 75px;
+}
+/* 去除单元格cell下边框 */
+/* .van-cell:after {
+  border-bottom: none !important;
+  border-bottom-style: none !important;
+} */
+
+

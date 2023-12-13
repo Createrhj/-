@@ -1,0 +1,27 @@
+<view class="body">
+<view class="form">
+  <form class="forming" catchsubmit="formSubmit" catchreset="formReset">
+
+    <view class="rate">
+      <view class="rate-title">小程序整体评分</view>
+      <van-rate value="{{ value }}" bind:change="onChange" />
+    </view>
+
+    <view class="input">
+      <view class="input-title">输入意见</view>
+        <view class="input-slot">
+          <view class="weui-cell__bd" style="margin: 30rpx 0" >
+            <input class="weui-input" name="input" placeholder="请输入文字" />
+          </view>
+        </view>
+    </view>
+
+    <view class="btn-area">
+      <button bindtap="butt"style="margin: 30rpx 50rpx;background-color: #57865C;" type="primary" formType="submit">提交</button>
+      <button style="margin: 30rpx 50rpx" formType="reset">重置</button>
+    </view>
+  </form>
+</view>
+  </view>
+
+

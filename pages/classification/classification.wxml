@@ -1,0 +1,79 @@
+<view class="container">
+  <!-- 左侧菜单 -->
+  <view class="left">
+    <scroll-view class="container_left" scroll-y="true">
+      <view class="icon">
+        <van-icon size="40px" name="search" bindtap="clickSearch" />
+        <view>搜索</view>
+      </view>
+      <view class="{{currentIndex==0?'icon_active':'icon'}}" bindtap="ChangecurrentIndex" data-index="0">
+        <image src="/static/有害垃圾.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>有害垃圾</view>
+      </view>
+      <view class="{{currentIndex==1?'icon_active':'icon'}}" bindtap="ChangecurrentIndex" data-index="1">
+        <image src="/static/厨余垃圾-鱼骨.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>厨余垃圾</view>
+      </view>
+      <view class="{{currentIndex==2?'icon_active':'icon'}}" bindtap="ChangecurrentIndex" data-index="2">
+        <image src="/static/其他垃圾-破旧陶瓷品.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>其他垃圾</view>
+      </view>
+      <view class="{{currentIndex==3?'icon_active':'icon'}}" bindtap="ChangecurrentIndex" data-index="3">
+        <image src="/static/可回收.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>可回收垃圾</view>
+      </view>
+      <view class="{{currentIndex==4?'icon_active':'icon'}}" bindtap="ChangecurrentIndex" data-index="4">
+        <image src="/static/有偿回收.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>有偿回收</view>
+      </view>
+      <view class="icon" bindtap="clickUser">
+        <image src="/static/用户中心.png" style="height:100rpx;width: 100rpx;"></image>
+        <view>用户中心</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 右侧内容 -->
+  <view class="right">
+    <scroll-view class="container_right" scroll-y>
+
+    <!-- 垃圾分类展示 -->
+      <view class="refuse_cart" wx:if="{{currentIndex==0||currentIndex==1||currentIndex==2||currentIndex==3}}">
+        <view class="refuse_cart_item" wx:for="{{GarbageData}}" wx:key="index" wx:if="{{currentIndex==item.id}}">
+          <image src="{{item.image}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+
+
+
+
+
+
+      <!-- 回收站 -->
+      <view class="Recycling_goods" wx:if="{{currentIndex==4}}">
+        <view class="recycle_cart_item" wx:for="{{RecycleData}}" wx:key="index">
+          <image src="{{item.image}}"></image>
+          <text class="a">{{item.name}}</text>
+          <view>
+          <image class="scoreimage" src="/static/垃圾桶 (3).png" style="width: 50rpx;height: 50rpx;margin-top: 1rpx;margin-right: 2rpx;"></image>
+          <text style="margin-top: 100rpx;">{{item.score}}</text>
+          </view>
+          <button bindtap="butt"style="width: 95rpx;height: 95rpx;background-color: #c1cccb;border-radius: 100%;">
+           <image src="/static/绿色环保会场.png" style="width: 80rpx;height: 80rpx;margin-left: -21rpx;margin-bottom: -24rpx;"></image>
+          </button>
+        </view>
+      </view>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </scroll-view>
+  </view>
+</view>

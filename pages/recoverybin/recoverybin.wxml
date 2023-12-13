@@ -1,0 +1,14 @@
+<view class="card_box" wx:for="{{GoodsData}}" wx:key="index">
+  <view class="cart">
+    <view class="cart_left" style="margin-right: 10px;">
+      <image style="width: 170rpx;height: 130rpx;margin-left: 30rpx;margin-top: 48rpx;display: block;" src="{{item.image}}"></image>
+    </view>
+    <view class="cart_right">
+      <view style="margin-top: 55rpx;font-size: 14px;font-weight: bold;">{{item.name}}</view>
+      <view style="font-size: 15px;">{{item.class}}</view>
+      <view style="margin-top: 15rpx; color: #57865C;font-weight: bold;">积分：{{item.score}}
+      </view>
+      <van-stepper value="{{ item.count }}" integer style="margin-top: -50rpx; margin-left: 300rpx;" button-size="25px"bind:change="onChange"/>
+    </view>
+  </view>
+</view>

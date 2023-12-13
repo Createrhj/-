@@ -1,0 +1,28 @@
+<van-search value="{{ keyword }}" placeholder="请输入搜索关键词" show-action shape="round" bind:search="onSearch" bind:cancel="onCancel" bindchange="onChange" />
+
+<view class="history" wx:if="{{historyList.length}}">
+  <view class="title">
+    <view class="text">搜索历史</view>
+    <view class="remove" bindtap="removeHistory">
+      <van-icon name="delete-o" size="18" />
+      <text class="font">清空历史</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="item" wx:for="{{historyList}}" wx:key="item" data-value="{{item}}" bindtap="tapHisitem">{{item}}</view>
+  </view>
+</view>
+
+<view class="total" wx:if="{{total}}">
+  共检索出<text>{{total}}</text>条内容
+</view>
+
+<view class="main">
+  <view class="box" wx:for="{{dataList}}">
+  </view>
+</view>
+
+<van-empty 
+wx:if="{{noData}}"
+ image="search" 
+ description="无搜索内容" />

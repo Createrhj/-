@@ -1,0 +1,23 @@
+.form{
+  margin-top: 10rpx;
+  width: 600rpx;
+  border-radius: 20rpx;
+  background-color: #eae3c0;
+  height: 700rpx;
+}
+.body{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color:#57865C;
+  height: 100vh;
+}
+.rate{
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  margin-bottom: 50rpx;
+}
+.input{
+  margin-bottom: 100rpx;
+  margin-left: 30rpx;
+}
