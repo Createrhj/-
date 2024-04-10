@@ -5,8 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    historyList:[],
-    dataList:[],
+    historyList:['易拉罐','水果皮', '奶茶杯',' 过期口红'],
+    dataList:[
+      {name:'过期药品',
+      class:'有害垃圾',
+      score:5,
+      count:3,
+      image:'/static/小花.png'
+     },
+    ],
     total:0,
     keyword:"",
     noData:false,
@@ -128,5 +135,11 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  jump(){
+    wx.redirectTo({
+      url: '/pages/searchresult/searchresult',
+    })
   }
 })

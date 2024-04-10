@@ -1,0 +1,17 @@
+<view class="body">
+<view class="form">
+    <text style="font-size: 55px;margin-left:10px;font-family:'Courier New', Courier, monospace;color:darkolivegreen;">LOGIN</text>
+    <banner style="margin: 100rpx; text-align:center">
+    <view style="margin-top: 150rpx;">
+        <image mode="aspectFill" src="{{userinfo.avatarUrl}}" style="width: 200rpx; height: 200rpx;"></image>
+        <text style="text-align:justify;font-size:28px;font-family: 隶书;">\n{{userinfo.nickName}}</text>
+    </view>
+    </banner>
+    
+<button wx:if="{{!hasUserInfo}}" style="width: 300rpx;margin-top: 80rpx;" type="primary" bindtap="getUserProfile">微信登录</button>
+<button wx:if="{{hasUserInfo}}" style="width: 300rpx;margin-top: 80rpx;" type="primary" bindtap="jump">欢迎来到森清</button>
+
+</view>
+</view>
+
+

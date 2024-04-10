@@ -1,0 +1,14 @@
+/* pages/search/search.wxss */
+.cart{
+  width: 100vw;
+  height: 260rpx;
+  margin-top: 20rpx;
+  display: flex;
+}
+.card_box{
+  background-color:#eae3c0;
+}
+.cart_right{
+  display: flex;
+  flex-direction: column;
+}

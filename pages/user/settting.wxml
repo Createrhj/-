@@ -1,4 +1,5 @@
+<van-cell title="姓名" is-link value="{{name}}" />
+<van-cell title="电话号码" is-link value="{{phone}}" />
 <van-cell title="我的昵称" is-link value="{{username}}" />
-<van-cell title="姓名" is-link value="{{userinfo.nickName}}" />
 <van-cell title="我的住址" is-link value="{{address}}" />
 

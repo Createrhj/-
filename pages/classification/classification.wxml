@@ -35,13 +35,20 @@
   <!-- 右侧内容 -->
   <view class="right">
     <scroll-view class="container_right" scroll-y>
+        <!-- 进去首页界面 -->
+        <view class="backimage" wx:if="{{currentIndex==5}}">
+        <image src="/static/bg3.jpg"></image>
+        </view>
+
 
     <!-- 垃圾分类展示 -->
       <view class="refuse_cart" wx:if="{{currentIndex==0||currentIndex==1||currentIndex==2||currentIndex==3}}">
-        <view class="refuse_cart_item" wx:for="{{GarbageData}}" wx:key="index" wx:if="{{currentIndex==item.id}}">
-          <image src="{{item.image}}"></image>
-          <text>{{item.name}}</text>
+        <view class="refuse_cart_item" wx:for="{{GarbageData}}" wx:key="index" wx:if="{{currentIndex==item.id}}" >
+          <view bind:tap="showPopup"><image src="{{item.image}}"></image>
+          <text>{{item.name}}</text></view>
+          <van-popup show="{{ show }}" round bind:close="onClose" custom-style="height: 270rpx;width:300rpx;display:flex;justify-content: center;  align-items: center;word-wrap:break-word">{{item.detal}}</van-popup>
         </view>
+       
       </view>
 
 

@@ -1,22 +1,33 @@
-// pages/user/settting.js
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username:'七安',
-    name:'zmy',
-    phone:'18716740092',
-    address:'XX省XX市XX区XX小区',
+    dataList:[
+     {
+        name:'手机电池',
+        class:'有害垃圾',
+        image:'/static/有害垃圾/手机电池.png',
+      },
+      {
+        name:'铅蓄电池',
+        class:'有害垃圾',
+        image:'/static/有害垃圾/铅蓄电池.png'
+      },
+      {
+        name:'纽扣电池',
+        class:'有害垃圾',
+        image:'/static/有害垃圾/纽扣电池.png'
+      },
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
 
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -65,5 +76,6 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
 })

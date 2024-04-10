@@ -1,0 +1,29 @@
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#57865C"
+  placeholder="电池" 
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+  bind:clear="onClear">
+  <view slot="action" bind:tap="onClick" style="color: aliceblue;padding: 0 40rpx;" bindtap="jump">搜索</view>
+</van-search>
+
+<view class="card_box" wx:for="{{dataList}}" wx:key="index">
+  <view class="cart">
+    <view class="cart_left" style="margin-right: 10px;">
+      <image style="width: 200rpx;height: 120rpx;margin-left: 30rpx;margin-top: 60rpx;display: block;" src="{{item.image}}"></image>
+    </view>
+    <view class="cart_right">
+      <view style="margin-top: 60rpx;margin-left: 80px;font-size: 20px;font-weight: bold;font-family: '楷体';">名称：{{item.name}}</view>
+      <view style="font-size: 16px;font-weight: bold;color: #57865C;margin-top: 50rpx;margin-left: 95px;font-family: '宋体';">类型：{{item.class}}</view>
+      <van-stepper value="{{ item.count }}" integer style="margin-top: -50rpx; margin-left: 300rpx;" button-size="25px"bind:change="onChange"/>
+    </view>
+  </view>
+</view>
+
+<van-empty 
+wx:if="{{noData}}"
+ image="search" 
+ description="无搜索内容" />

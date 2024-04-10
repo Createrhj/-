@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/classification/classification",
     "pages/user/user",
     "pages/user/settting",
     "pages/feedback/feedback",
     "pages/recoverybin/recoverybin",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/searchresult/searchresult"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -6,19 +6,43 @@ Page({
    */
   data: {
     GoodsData:[
-      {name:'过期药品',
-      class:'有害垃圾',
-      score:5,
+      {name:'旧衣物被褥',
+      class:'可回收垃圾',
+      score:10,
       count:3,
-      image:'/static/小花.png'
+      image:'/static/可回收垃圾/旧衣物被褥.png'
      },
-     {name:'过期药品',
-     class:'有害垃圾',
-     score:5,
+     {name:'毛绒玩具',
+     class:'可回收垃圾',
+     score:6,
      count:1,
-     image:'/static/小花.png'
-    },],
-  },
+     image:'/static/可回收垃圾/毛绒玩偶.png'
+    },
+    {name:'毛报纸书本',
+     class:'可回收垃圾',
+     score:8,
+     count:1,
+     image:'/static/可回收垃圾/报纸书本.png'
+    },
+    {name:'纸箱纸板',
+     class:'可回收垃圾',
+     score:8,
+     count:1,
+     image:'/static/可回收垃圾/纸箱纸板.png'
+    },
+    {name:'易拉罐',
+    class:'可回收垃圾',
+    score:2,
+    count:1,
+    image:'/static/可回收垃圾/易拉罐.png'
+   },
+   {name:'牛奶盒',
+     class:'可回收垃圾',
+     score:2,
+     count:1,
+     image:'/static/可回收垃圾/牛奶盒.png'
+    },
+]},
   onChange(event) {
     console.log(event.detail);
     

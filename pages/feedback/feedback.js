@@ -53,7 +53,7 @@ Page({
        //弹窗后执行，可以省略
        setTimeout(function () {
           wx.reLaunch({
-           url: '../index/index',
+           url: '/pages/user/user',
               })
             }, 1500);
         }

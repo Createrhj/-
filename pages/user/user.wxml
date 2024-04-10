@@ -3,7 +3,6 @@
     <view class="user_detail">
     <image src="{{userinfo.avatarUrl}}" class="head"></image>
     <text style="margin: 36px;font-size: 42rpx;font-family:'楷体'">{{userinfo.nickName}}</text>
-    <button wx:if="{{!hasUserInfo}}" style="width: 250rpx" bindtap="getUserProfile" class="user_name">登录</button>
 </view>
 </view>
 

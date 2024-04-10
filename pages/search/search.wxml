@@ -1,4 +1,14 @@
-<van-search value="{{ keyword }}" placeholder="请输入搜索关键词" show-action shape="round" bind:search="onSearch" bind:cancel="onCancel" bindchange="onChange" />
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#57865C;"
+  placeholder="请输入搜索关键词" 
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+  bind:clear="onClear">
+  <view slot="action" bind:tap="onClick" style="color: aliceblue;padding: 0 40rpx;" bindtap="jump">搜索</view>
+</van-search>
 
 <view class="history" wx:if="{{historyList.length}}">
   <view class="title">
@@ -13,14 +23,6 @@
   </view>
 </view>
 
-<view class="total" wx:if="{{total}}">
-  共检索出<text>{{total}}</text>条内容
-</view>
-
-<view class="main">
-  <view class="box" wx:for="{{dataList}}">
-  </view>
-</view>
 
 <van-empty 
 wx:if="{{noData}}"

@@ -33,3 +33,17 @@
   margin: 0 20rpx 20rpx 0;
   border-radius: 5rpx;
 }
+
+.cart{
+  width: 100vw;
+  height: 210rpx;
+  margin-top: 7rpx;
+  display: flex;
+}
+.card_box{
+  background-color:#eae3c0;
+}
+.cart_right{
+  display: flex;
+  flex-direction: column;
+}
